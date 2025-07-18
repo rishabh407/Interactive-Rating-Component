@@ -1,8 +1,8 @@
 const buttons = document.querySelectorAll(".btn");
-let submitbtn=document.querySelector(".submit-btn");
-let main1=document.querySelector(".main-1");
-let mainsecond=document.querySelector(".main-2");
-let selectedpara=document.querySelector(".selectedpara");
+const submitbtn=document.querySelector(".submit-btn");
+const main1=document.querySelector(".main-1");
+const mainsecond=document.querySelector(".main-2");
+const selectedpara=document.querySelector(".selectedpara");
 buttons.forEach((btn)=>{
         btn.addEventListener("click",()=>{
            buttons.forEach((bts)=>{

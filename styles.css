@@ -6,10 +6,15 @@
             :root{
                 --primary-color: hsl(25, 97%, 53%) ;
                 --primary-color2:hsl(211, 23%, 19%);
+                --primary-color3:hsl(216, 12%, 8%);
+                --primary-color4:hsl(217, 12%, 63%);
+                --primary-color5:black;
+                --primary-color6:white;
+                              
             }
         body{
-            background-color: hsl(216, 12%, 8%);
-            color:white;
+            background-color: var(--primary-color3);
+            color:var(--primary-color6);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         section,.section-2{
@@ -19,10 +24,10 @@
             justify-content: center;
         }
         .main{
-            padding:2rem;
+            padding: clamp(1rem, 2vw, 2rem);
             background-color: hsl(215, 28%, 14%);
             height:56%;
-            max-width:350px;
+            max-width:18rem;
             border-radius:1rem;
         }
         .main2{
@@ -38,17 +43,20 @@
             justify-content: center;
             width:2.5rem;
             border-radius:50%;
-            margin-bottom:1rem;
+            /* margin-bottom:1rem; */
+            margin-block-end: 1rem;
         }
         .heading h2{
             font-weight: 600;
             word-spacing: 3px;
-            margin-bottom:0.5rem;
+            /* margin-bottom:0.5rem; */
+            margin-block-end: 0.5rem;
         }
 .para p{
     font-size:0.9rem;
-    color:hsl(217, 12%, 63%);
-    margin-bottom:2rem;
+    color:var(--primary-color4);
+    /* margin-bottom:2rem; */
+    margin-block-end: 2rem;
 }
 .selectedpara{
         color:hsl(25, 58%, 61%);
@@ -58,12 +66,13 @@
    border-bottom-left-radius: 2rem;
    border-bottom-right-radius: 2rem;
    border-top-right-radius: 2rem;
-   margin-top:1.5rem;
+   margin-block-start:1.5rem;
 }
 .heading-2 h2{
-    margin-top:1.5rem;
+    margin-block-start:1.5rem;
     font-weight: 500;
-    margin-bottom:1rem;
+    /* margin-bottom:1rem; */
+    margin-block-end: 1rem;
 }
 .para2{
        text-align: center;
@@ -82,20 +91,20 @@
     border-radius: 50%;
     background-color:var(--primary-color2);
     border:none;
-    color:hsl(217, 12%, 63%);
+    color:var(--primary-color4);
     cursor: pointer;
 }
 .lastprop{
-    background-color:white;
-     color:black;
+    background-color:var(--primary-color6);
+     color:var(--primary-color5);
 }
 .btn:not(.lastprop):hover{
     background-color:var(--primary-color);
-    color:black;
+    color:var(--primary-color5);
 }
 .submit-button{
     text-align: center;
-margin-top:1.5rem;
+margin-block-start:1.5rem;
 }
 .submit-btn{
     padding:0.8rem 5rem;
@@ -112,7 +121,7 @@ margin-top:1.5rem;
 }
 .submit-btn:hover{
     background-color:var(--primary-color);
-    color:black;
+    color:var(--primary-color5);
 }
 .hide{
     display: none;
@@ -121,8 +130,8 @@ margin-top:1.5rem;
 {
    /* devices greater than 375  */
          .main{          
-            height:54%;
-            max-width: 350px;
+            height:57%;
+            max-width: 22rem;/*350px*/
             }
               .submit-btn{
     padding:0.8rem 7rem;
@@ -132,3 +141,11 @@ margin-top:1.5rem;
     width:3rem;
   } 
 }
+
+/* Physical Property	Logical Property
+margin-top	         margin-block-start
+margin-bottom	     margin-block-end
+margin-left	         margin-inline-start
+margin-right         margin-inline-end
+padding-left	     padding-inline-start
+padding-top	         padding-block-start */
