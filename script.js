@@ -15,7 +15,7 @@ buttons.forEach((btn)=>{
 // console.log(mainsecond);
 // console.log(main1);
 const sumbitresponse=((btn)=>{
-    let response=btn.innerText;
+    const response=btn.innerText;
     // console.log(response);
     submitbtn.addEventListener("click",()=>{
         main1.classList.add("hide");
