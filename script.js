@@ -1,5 +1,4 @@
-let buttons = document.querySelectorAll(".btn");
-let x=true;
+const buttons = document.querySelectorAll(".btn");
 let submitbtn=document.querySelector(".submit-btn");
 let main1=document.querySelector(".main-1");
 let mainsecond=document.querySelector(".main-2");
@@ -13,11 +12,11 @@ buttons.forEach((btn)=>{
            sumbitresponse(btn);
         });
 });
-console.log(mainsecond);
-console.log(main1);
+// console.log(mainsecond);
+// console.log(main1);
 const sumbitresponse=((btn)=>{
     let response=btn.innerText;
-    console.log(response);
+    // console.log(response);
     submitbtn.addEventListener("click",()=>{
         main1.classList.add("hide");
         mainsecond.classList.remove("hide");
